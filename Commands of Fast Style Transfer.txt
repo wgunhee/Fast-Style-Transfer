@@ -1,0 +1,15 @@
+NUM_EPOCHS=5          // override with --epochs argument
+BATCH_SIZE=4          // override with --batch-size argument
+LEARNING_RATE = 1e-3  // override with --learning-rate argument
+CONTENT_WEIGHT = 1  // override with --content-weight argument
+STYLE_WEIGHT = 5    // override with --style-weight argument
+TV_WEIGHT = 1e-6       // override with --tv-weight argument
+--content-image          //path to content image you want to stylize.
+--model          //saved model to be used for stylizing the image (eg: mosaic.pth)
+--output-image          //path for saving the output image.
+--content-scale          //factor for scaling down the content image if memory is an issue (eg: value of 2 will halve the height and width of content-image)
+--cuda          //set it to 1 for running on GPU, 0 for CPU.
+--dataset          //path to training dataset, the path should point to a folder containing another folder with all the training images. I used COCO 2014 Training images dataset [80K/13GB] (download).
+--style-image          //path to style-image.
+--save-model-dir          //path to folder where trained model will be saved.
+--cuda          //set it to 1 for running on GPU, 0 for CPU.
